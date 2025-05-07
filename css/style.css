@@ -1,0 +1,61 @@
+/* Base Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Zen Tokyo Zoo', sans-serif;
+  background-color: #a2d2ff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+canvas {
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Accessibility Enhancements */
+a:focus,
+button:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+/* Hover Effects */
+.arrow-link {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.arrow-link:hover,
+.arrow-link:focus {
+  background-color: rgba(0, 0, 0, 0.85);
+}
