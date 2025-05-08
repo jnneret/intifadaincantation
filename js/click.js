@@ -18,13 +18,12 @@ let messages = [
     createCanvas(windowWidth, windowHeight);
     textFont(font);
     textSize(48);
-    fill(255);
     textAlign(CENTER, CENTER);
-    background(0);
+    background('#400101');
   }
   
   function draw() {
-    background(0);
+    background('#400101');
     if (currentIndex < messages.length) {
       text(messages[currentIndex], width / 2, height / 2);
     }
