@@ -1,4 +1,11 @@
-/* Base Styles */
+@font-face {
+  font-family: "Jersey 25 Charted";
+  src: url("fonts/Jersey25Charted-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*CHAT GPT HELP */
 *,
 *::before,
 *::after {
@@ -8,24 +15,18 @@
 }
 
 body {
-  font-family: 'Zen Tokyo Zoo', sans-serif;
-  background-color: #a2d2ff;
-  color: #333;
+  font-family: 'Jersey 25 Charted', sans-serif;
+  background-color: #400101;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
 }
 
-canvas {
-  border: 2px solid white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  display: block;
-}
 
-/* Responsive Layout */
 @media (max-width: 768px) {
   body {
     padding: 10px;
@@ -37,14 +38,6 @@ canvas {
   }
 }
 
-/* Accessibility Enhancements */
-a:focus,
-button:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 2px;
-}
-
-/* Hover Effects */
 .arrow-link {
   position: absolute;
   bottom: 20px;
@@ -58,4 +51,86 @@ button:focus {
 .arrow-link:hover,
 .arrow-link:focus {
   background-color: rgba(0, 0, 0, 0.85);
+}
+
+.horizontal-text {
+  position: absolute;
+  top: 20px;
+  font-size: 50px;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.vertical-container {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.vertical-text {
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.bouncing-text {
+  font-size: 50px;
+  animation: bounce 2s ease-in-out infinite;
+  color: #fff;
+}
+
+#circle-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+#rotating-text {
+  position: absolute;
+  font-size: 30px;
+  white-space: nowrap;
+  transform-origin: center;
+  animation: rotate-text 10s infinite linear;
+}
+
+@keyframes rotate-text {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#hint {
+  font-size: 36px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#new-text {
+  font-size: 24px;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
 }

@@ -1,21 +1,21 @@
 let font;
-let string = `Intifada Incantation, poem by June Jordan, interactive website by Jayla Neret`;
+let string = `Intifada Incantation, poem by June Jordan. Interactive website by Jayla Neret`;
 let currentCharacter = 0;
 let pageMargin = 25;
 
 function preload() {
-  font = loadFont('fonts/Staatliches-Regular.ttf'); 
+  font = loadFont('fonts/Doto-VariableFont_ROND,wght.ttf'); 
 }
 
 function setup() {
-  createCanvas(700, 150);
+  createCanvas(600, 300);
   textFont(font);
   textAlign(LEFT, TOP);
   textSize(64);
 }
 
 function draw() {
-  background('#a2d2ff');
+  background('#400101');
 
   fill(255);
   noStroke();
