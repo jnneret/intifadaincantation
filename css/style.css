@@ -17,7 +17,7 @@
 body {
   font-family: 'Jersey 25 Charted', sans-serif;
   background-color: #400101;
-  color: black;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,6 +119,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
 
 #hint {
   font-size: 36px;

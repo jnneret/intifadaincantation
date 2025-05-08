@@ -6,7 +6,7 @@ Video Tutorial: https://youtu.be/-6v_AYyn49k
 
 class Letter {
     constructor(x, y) {
-      this.alphabets = ["Thank","You","T", "H","A", "N", "K", "Y", "O", "U"];
+      this.alphabets = ["THANK","YOU","THE", "END","E", "H", "D", "T", "H", "A", "N", "K", "Y", "O", "U"];
       this.letter = random(this.alphabets);
       this.f = random(fonts);
       this.size = random(10, 30);
